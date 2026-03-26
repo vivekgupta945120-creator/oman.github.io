@@ -17,7 +17,7 @@
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
 
 <script>
-  // 🔥 तुम्हारा Firebase Config (तुम्हारे screenshot से लिया)
+  //  Firebase Config ( screenshot)
   var firebaseConfig = {
     apiKey: "AIzaSyDi...",
     authDomain: "oman-90237.firebaseapp.com",
@@ -40,18 +40,7 @@
 
     document.getElementById("msg").innerHTML = "✅ Data Saved Online!";
   }
-  <ul id="list"></ul>
 
-<script>
-firebase.database().ref("users").on("value", function(snapshot) {
-  var data = snapshot.val();
-  var list = document.getElementById("list");
-  list.innerHTML = "";
-
-  for (let key in data) {
-    list.innerHTML += "<li>" + data[key].name + "</li>";
-  }
-});
 </script>
 
 </body>
