@@ -31,16 +31,6 @@
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
-  function saveData() {
-    var name = document.getElementById("name").value;
-
-    firebase.database().ref("users").push({
-      name: name
-    });
-
-    document.getElementById("msg").innerHTML = "✅ Data Saved Online!";
-  }
-
 </script>
 
 </body>
