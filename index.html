@@ -40,6 +40,18 @@
 
     document.getElementById("msg").innerHTML = "✅ Data Saved Online!";
   }
+  <ul id="list"></ul>
+
+<script>
+firebase.database().ref("users").on("value", function(snapshot) {
+  var data = snapshot.val();
+  var list = document.getElementById("list");
+  list.innerHTML = "";
+
+  for (let key in data) {
+    list.innerHTML += "<li>" + data[key].name + "</li>";
+  }
+});
 </script>
 
 </body>
